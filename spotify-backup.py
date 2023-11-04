@@ -201,7 +201,9 @@ def main():
 						name=track['track']['name'],
 						artists=', '.join([artist['name'] for artist in track['track']['artists']]),
 						album=track['track']['album']['name'],
-						release_date=track['track']['album']['release_date']
+						release_date=track['track']['album']['release_date'],
+						# Date added to playlist (For the sentimental)
+						added_at=track['added_at']
 					))
 				f.write('\r\n')
 			if len(liked_albums) > 0:
